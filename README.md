@@ -162,8 +162,8 @@ new Virtnumber({
 
 ## Limits
 
-The REST API allows 20 requests per 15 minutes per account. Some calls need a positive
-balance. See the [API reference](https://www.virtnumber.com/developer) and the
+The REST API allows 20 requests per 15 minutes per account. Every call except
+`balance.get()` needs at least 1 EUR on the balance; below that the API answers 403. See the [API reference](https://www.virtnumber.com/developer) and the
 [OpenAPI spec](https://www.virtnumber.com/openapi.json).
 
 ## AI agents
