@@ -1,0 +1,57 @@
+{
+  "name": "virtnumber",
+  "version": "0.1.0",
+  "description": "Official JavaScript and TypeScript client for the Virtnumber API: rent phone numbers in 14 countries, receive and send SMS from Node.js, Next.js and other server-side apps.",
+  "keywords": [
+    "virtnumber",
+    "sms",
+    "sms-api",
+    "receive-sms",
+    "send-sms",
+    "virtual-number",
+    "phone-number",
+    "webhook",
+    "nextjs",
+    "typescript"
+  ],
+  "homepage": "https://www.virtnumber.com/developer",
+  "bugs": {
+    "email": "support@virtnumber.com"
+  },
+  "license": "MIT",
+  "author": "Getcom OU (https://www.virtnumber.com)",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node scripts/cjs-package.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
