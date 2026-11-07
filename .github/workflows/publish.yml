@@ -1,7 +1,10 @@
-# Publishes to npm when a GitHub release is published (tag vX.Y.Z matching
-# package.json). Uses npm trusted publishing (OIDC): no npm token is stored
-# anywhere, and the package gets a provenance statement linking it to this
-# repository and workflow.
+# Stages a new npm version when a GitHub release is published (tag vX.Y.Z
+# matching package.json). Uses npm trusted publishing (OIDC): no npm token is
+# stored anywhere, and the package gets a provenance statement linking it to
+# this repository and workflow. The package requires 2FA with no bypass
+# tokens, so the workflow only stages the version (npm stage publish); a
+# maintainer approves it on npmjs.com with a passkey, and only then it goes
+# live.
 name: Publish to npm
 on:
   release:
@@ -21,4 +24,4 @@ jobs:
       - run: npm ci
       - name: Check the tag matches package.json
         run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
-      - run: npm publish
+      - run: npm stage publish
