@@ -175,7 +175,7 @@ an agent to receive and send SMS: [virtnumber/skills](https://github.com/virtnum
 
 ## Support
 
-support@virtnumber.com · [virtnumber.com/developer](https://www.virtnumber.com/developer)
+tech@virtnumber.com · [virtnumber.com/developer](https://www.virtnumber.com/developer)
 
 ## License
 
