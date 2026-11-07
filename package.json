@@ -27,7 +27,7 @@
     "email": "support@virtnumber.com"
   },
   "license": "MIT",
-  "author": "Getcom OU (https://www.virtnumber.com)",
+  "author": "Virtnumber (https://www.virtnumber.com)",
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
