@@ -12,10 +12,18 @@
     "phone-number",
     "webhook",
     "nextjs",
-    "typescript"
+    "typescript",
+    "mcp",
+    "virtual-phone-number",
+    "sms-webhook"
   ],
   "homepage": "https://www.virtnumber.com/developer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtnumber/virtnumber-js.git"
+  },
   "bugs": {
+    "url": "https://github.com/virtnumber/virtnumber-js/issues",
     "email": "support@virtnumber.com"
   },
   "license": "MIT",
@@ -53,5 +61,9 @@
   },
   "devDependencies": {
     "typescript": "5.9.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }

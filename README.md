@@ -170,6 +170,8 @@ The REST API allows 20 requests per 15 minutes per account. Every call except
 
 For AI agents (Claude, Cursor and others) use the MCP server at `https://www.virtnumber.com/mcp`
 instead of this package. It is listed in the official MCP Registry as `com.virtnumber/virtnumber`.
+Setup for each client: [virtnumber/mcp](https://github.com/virtnumber/mcp). Agent Skills that teach
+an agent to receive and send SMS: [virtnumber/skills](https://github.com/virtnumber/skills).
 
 ## Support
 
